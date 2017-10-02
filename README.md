@@ -1,5 +1,6 @@
 # KMeans
 C++ implementation of K-means algorithm</br></br>
 
+![cmd](/capture/cmd.png)
 ![data](/capture/data.png)
-![data](/capture/result.png)
+![result](/capture/result.png)
