@@ -8,6 +8,7 @@ public:
 	KMeans(int dimension_data, int number_cluster);
 	~KMeans();
 
+	// forgy method
 	void Initialize(int number_data, double **data);
 
 	int Classify(double data[]);
