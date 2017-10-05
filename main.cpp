@@ -29,7 +29,7 @@ int main(){
 
 		movements_centroids = kmeans.Cluster(number_data, data);
 
-		printf("step %d	%lf\n", i, movements_centroids);
+		printf("step %d	%lf\n", i + 1, movements_centroids);
 		if(movements_centroids == 0) break;
 	}
 
