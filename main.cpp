@@ -5,14 +5,14 @@
 
 int main(){
 	int dimension_data	= 2;
-	int number_cluster	= 4;
+	int number_clusters	= 4;
 	int number_data		= 100;
 
 	double **data = new double*[number_data];
 
 	FILE *file;
 
-	KMeans kmeans = KMeans(dimension_data, number_cluster);
+	KMeans kmeans = KMeans(dimension_data, number_clusters);
 
 	for(int i = 0;i < number_data;i++){
 		double position[] = {0.25, 0.75};
@@ -34,7 +34,7 @@ int main(){
 	}
 
 	printf("\ncentroids\n");
-	for(int i = 0;i < number_cluster;i++){
+	for(int i = 0;i < number_clusters;i++){
 		printf("%d: ", i);
 
 		for(int j = 0;j < dimension_data;j++){
@@ -45,7 +45,7 @@ int main(){
 
 	file = fopen("result.txt", "wt");
 
-	for(int j = 0;j < number_cluster;j++){
+	for(int j = 0;j < number_clusters;j++){
 		for(int i = 0;i < number_data;i++){
 			if(kmeans.Classify(data[i]) == j){
 				fprintf(file, "%d %lf %lf\n", kmeans.Classify(data[i]), data[i][0], data[i][1]);
