@@ -21,9 +21,9 @@ KMeans::~KMeans(){
 }
 
 void KMeans::Initialize(int number_data, double **data){
+	int number_sample = number_data / number_clusters;
+	
 	for(int i = 0;i < number_clusters;i++){
-		int number_sample = number_data / number_clusters;
-
 		for(int j = 0;j < dimension_data;j++){
 			double sum = 0;
 
